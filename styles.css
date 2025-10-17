@@ -1,0 +1,27 @@
+/* Components page specific styles */
+.comp-row { display: flex; flex-wrap: wrap; gap: .6rem; margin: .75rem 0 0; }
+.text { color: var(--muted); }
+.code { background: #0f1430; border: 1px solid var(--border); border-radius: 12px; padding: .75rem 1rem; overflow: auto; margin-top: .75rem; }
+
+/* Extend button variants locally for docs */
+.btn.danger { background: #ff5c5c; border-color: #ff3e3e; color: #0a0f24; font-weight: 600; }
+.btn.danger:hover { background: #ff3e3e; }
+
+/* Modal */
+.modal[hidden] { display: none !important; }
+.modal {
+  position: fixed; inset: 0; z-index: 50; display: grid; place-items: center;
+  background: rgba(0,0,0,.45);
+}
+.modal-dialog {
+  width: min(560px, 92vw);
+  background: linear-gradient(180deg, #121736, #0f1430);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 16px; box-shadow: var(--shadow);
+}
+.modal-header, .modal-footer { padding: .9rem 1rem; border-bottom: 1px solid var(--border); }
+.modal-footer { border-top: 1px solid var(--border); border-bottom: 0; display: flex; gap: .5rem; justify-content: flex-end; }
+.modal-body { padding: 1rem; }
+.icon-btn { background: transparent; border: 0; color: var(--muted); cursor: pointer; font-size: 1.1rem; }
+.icon-btn:hover { color: var(--text); }

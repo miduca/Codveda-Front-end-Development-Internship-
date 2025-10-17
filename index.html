@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Level 3 – CodVeda UI Components (Buttons, Cards, Inputs, Modal)" />
+    <title>Level 3 – Components</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Reuse Level 1 theme + local component docs styles -->
+    <link rel="stylesheet" href="../level1/src/styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Components">
+        <a class="logo" href="../index.html">CodVeda</a>
+        <ul class="nav-menu" style="display:flex">
+          <li><a href="../level1/index.html">Level 1</a></li>
+          <li><a href="../level2/index.html">Level 2</a></li>
+          <li><a href="#buttons">Buttons</a></li>
+          <li><a href="#cards">Cards</a></li>
+          <li><a href="#inputs">Inputs</a></li>
+          <li><a href="#modal">Modal</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="section" id="intro">
+        <header class="section-header">
+          <h1>CodVeda Components</h1>
+          <p class="tagline">Reusable, accessible components aligned with the landing page theme.</p>
+        </header>
+      </section>
+
+      <section class="section" id="buttons" aria-labelledby="buttons-title">
+        <header class="section-header"><h2 id="buttons-title">Buttons</h2></header>
+        <div class="comp-row">
+          <button class="btn">Default</button>
+          <button class="btn primary">Primary</button>
+          <button class="btn ghost">Ghost</button>
+          <button class="btn danger">Danger</button>
+        </div>
+        <pre class="code"><code>&lt;button class="btn"&gt;Default&lt;/button&gt;
+&lt;button class="btn primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn ghost"&gt;Ghost&lt;/button&gt;
+&lt;button class="btn danger"&gt;Danger&lt;/button&gt;</code></pre>
+      </section>
+
+      <section class="section" id="cards" aria-labelledby="cards-title">
+        <header class="section-header"><h2 id="cards-title">Cards</h2></header>
+        <div class="grid">
+          <article class="card">
+            <h3>Card Title</h3>
+            <p class="text">Cards support any content. They use the same theme and shadow.</p>
+            <button class="btn primary">Action</button>
+          </article>
+          <article class="card">
+            <h3>Another Card</h3>
+            <p class="text">Use grid to lay out multiple cards responsively.</p>
+            <button class="btn">Secondary</button>
+          </article>
+        </div>
+        <pre class="code"><code>&lt;article class="card"&gt;
+  &lt;h3&gt;Card Title&lt;/h3&gt;
+  &lt;p&gt;Cards support any content...&lt;/p&gt;
+  &lt;button class="btn primary"&gt;Action&lt;/button&gt;
+&lt;/article&gt;</code></pre>
+      </section>
+
+      <section class="section" id="inputs" aria-labelledby="inputs-title">
+        <header class="section-header"><h2 id="inputs-title">Inputs</h2></header>
+        <form class="form" novalidate>
+          <div class="form-control">
+            <label for="demo-name">Label</label>
+            <input id="demo-name" placeholder="Type something" />
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="form-control">
+            <label for="demo-email">Email</label>
+            <input id="demo-email" type="email" placeholder="you@example.com" />
+            <small class="error" aria-live="polite"></small>
+          </div>
+        </form>
+        <pre class="code"><code>&lt;div class="form-control"&gt;
+  &lt;label for="id"&gt;Label&lt;/label&gt;
+  &lt;input id="id" /&gt;
+  &lt;small class="error" aria-live="polite"&gt;&lt;/small&gt;
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <section class="section" id="modal" aria-labelledby="modal-title">
+        <header class="section-header"><h2 id="modal-title">Modal</h2></header>
+        <button class="btn primary" data-open-modal="#demoModal">Open Modal</button>
+        <div id="demoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalHeading" aria-describedby="modalDesc" hidden>
+          <div class="modal-dialog" role="document" tabindex="-1">
+            <header class="modal-header">
+              <h3 id="modalHeading">Example Modal</h3>
+              <button class="icon-btn" data-close-modal aria-label="Close">✕</button>
+            </header>
+            <div class="modal-body">
+              <p id="modalDesc">This modal demonstrates ARIA roles and focus management.</p>
+            </div>
+            <footer class="modal-footer">
+              <button class="btn ghost" data-close-modal>Cancel</button>
+              <button class="btn primary">Confirm</button>
+            </footer>
+          </div>
+        </div>
+        <pre class="code"><code>&lt;button data-open-modal="#demoModal"&gt;Open Modal&lt;/button&gt;
+&lt;div id="demoModal" class="modal" role="dialog" aria-modal="true" hidden&gt;...&lt;/div&gt;</code></pre>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> CodVeda Components</p>
+        <a href="#intro" class="to-top" aria-label="Back to top">↑</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="./components.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+/* Bootstrap theme overrides for CodVeda */
+:root {
+  --bs-body-bg: #0b1020;
+  --bs-body-color: #e6e8ef;
+  --brand-primary: #6c8cff;
+  --brand-primary-600: #5a77e6;
+}
+
+body {
+  background: radial-gradient(1200px 800px at 10% 0%, #0f1634 0%, var(--bs-body-bg) 50%),
+              radial-gradient(1000px 600px at 90% 10%, #0d1430 0%, transparent 60%),
+              var(--bs-body-bg);
+}
+
+.navbar.bg-dark { background-color: rgba(11, 16, 32, 0.8) !important; backdrop-filter: blur(8px); }
+
+a, .nav-link, .navbar-brand { color: #cfd5f0; }
+.nav-link:hover, .navbar-brand:hover { color: #fff; }
+
+.btn-primary {
+  --bs-btn-bg: var(--brand-primary);
+  --bs-btn-border-color: var(--brand-primary-600);
+  --bs-btn-hover-bg: var(--brand-primary-600);
+  --bs-btn-hover-border-color: var(--brand-primary-600);
+  --bs-btn-color: #0a0f24;
+  --bs-btn-font-weight: 600;
+}
+
+.card {
+  background: linear-gradient(180deg, #121736, #0f1430);
+  color: var(--bs-body-color);
+  border: 1px solid #243052;
+}
+
+.form-control, .form-select {
+  background-color: #0f1430;
+  color: var(--bs-body-color);
+  border-color: #243052;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 0.25rem rgba(108,140,255,.25);
+}
+
+.text-muted { color: #a6adcf !important; }
+
+.list-group-item {
+  background-color: #0f1430;
+  color: var(--bs-body-color);
+  border-color: #243052;
+}
+
+.footer a { color: #cfd5f0; }
+.footer a:hover { color: #fff; }
